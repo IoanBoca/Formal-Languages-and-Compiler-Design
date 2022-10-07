@@ -1,0 +1,18 @@
+p1. Compute the max of 3 numbers
+
+numar a, b, c, max
+citeste a, b, c
+
+daca a > b
+	daca a > c
+		max = a
+	daca_nu
+		max = c
+daca_nu
+	daca b > c
+		max = b
+	daca_nu
+		max = c
+
+printeaza "maximul este: "
+printeaza max

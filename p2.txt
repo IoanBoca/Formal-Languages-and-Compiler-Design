@@ -1,0 +1,23 @@
+p2. Verify if number is prime
+
+numar i, n
+af e_prim = adevarat
+
+citeste n
+
+daca n = sau n = 1
+	e_prim = fals
+
+merge i de_la 2 la n/2 cu 1
+	daca n % i = 0
+		e_prim = fals
+		iesire
+
+daca e_prim
+	printeaza "Numarul "
+	printeaza n
+	printeaza " este prim"
+daca_nu
+	printeaza "Numarul "
+	printeaza n
+	printeaza " nu este prim"

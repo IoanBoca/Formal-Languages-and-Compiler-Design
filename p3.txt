@@ -1,0 +1,8 @@
+p3. Compute the sum of n numbers
+
+numar i, n, sum = 0
+citeste n
+
+merge i de_la 0 la n-1 cu 1
+	citeste n
+	sum = sum + n
