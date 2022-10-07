@@ -12,7 +12,7 @@ daca_nu
 	daca b > c
 		max = b
 daca_nu
-	max = c
+    max = c
 
 printeaza "maximul este: "
 printeaza max
