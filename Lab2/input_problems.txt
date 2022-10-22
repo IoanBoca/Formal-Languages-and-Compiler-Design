@@ -1,0 +1,19 @@
+numar a, b, c, max, random_variable
+citeste a, b, c
+
+random = 5
+
+daca a > b
+    daca a > c
+        max = a
+    daca_nu
+        max = c
+daca_nu
+    daca b > c
+        max = b
+    daca_nu
+        max = c
+
+random = 10
+
+printeaza max
