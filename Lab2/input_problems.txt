@@ -1,19 +1,19 @@
-numar a, b, c, max, random_variable
-citeste a, b, c
+int a, b, c, max, random_variable
+read a, b, c
 
 random = 5
 
-daca a > b
-    daca a > c
+if a > b
+    if a > c
         max = a
-    daca_nu
+    else
         max = c
-daca_nu
-    daca b > c
+else
+    if b > c
         max = b
-    daca_nu
+    else
         max = c
 
 random = 10
 
-printeaza max
+print max

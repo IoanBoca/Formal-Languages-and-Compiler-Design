@@ -1,5 +1,5 @@
-class hashTable:
 
+class hashTable:
     def __init__(self, size):
         """
         Initialize the hashtable by creating a list of a given size that on every position contains an empty list
@@ -9,6 +9,7 @@ class hashTable:
         self.items = []
         for i in range(0, size):
             self.items.append([])
+        self.counter = 1
 
     def getSize(self):
         """
@@ -34,8 +35,9 @@ class hashTable:
         :return: True if the element does not already exist in the table, False otherwise
         """
         hashVal = self.hash(key)
-        if key not in self.items[hashVal]:
-            self.items[hashVal].append(key)
+        if not self.contains(key):
+            self.items[hashVal].append((self.counter, key))
+            self.counter += 1
             return True
         return False
 
@@ -46,6 +48,9 @@ class hashTable:
         :return: True if it is contained in the hashtable, False otherwise
         """
         hashVal = self.hash(key)
+        for tpl in self.items[hashVal]:
+            if key in tpl:
+                return True
         if key in self.items[hashVal]:
             return True
         return False
@@ -61,7 +66,7 @@ class hashTable:
             listPosition = self.hash(key)
             listIndex = 0
             for e in self.items[listPosition]:
-                if e != key:
+                if e[1] != key:
                     listIndex += 1
                 else:
                     break
@@ -91,3 +96,7 @@ class hashTable:
                 print("empty")
             else:
                 print(*self.items[i], sep="; ")
+
+    def getItems(self):
+        return self.items
+
