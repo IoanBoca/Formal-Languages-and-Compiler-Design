@@ -16,7 +16,6 @@ OUTPUT: PIF + ST
         classify(token);
         codify(token);
     End_while
-
 """
 
 
@@ -44,7 +43,7 @@ class Scanner:
         scans the input program for identifiers and constants and adds them in the symtable
         :return:
         """
-        f = open('input_problems.txt')
+        f = open('pb1.txt')
         lineCount = 0
         lexicalError = False
         lexicalErrorLine = -1
@@ -110,14 +109,14 @@ class Scanner:
 
 
 reservedWords = ["int", "bool", "array", "char", "string", "if", "else", "while", "for", "read", "print"]
-operators = ["+", "-", "*", "/", ":=", ">", "<", "<=", "=", ">="]
-separators = ["[", "]", "{", "}", ":", ";"]
+operators = ["+", "-", "*", "/", "%", ":=", ">", "<", "<=", "=", ">="]
+separators = ["(", ")", "[", "]", "{", "}", ":", ";"]
 symTbl = hashTable(15)
 pif = []
 scanner = Scanner(reservedWords, operators, separators, symTbl, pif, "token.in.txt")
 scanner.scan()
 
-scanner.getSymTableCode("a")
+
 
 """
 reservedWords = ["numar", "af", "vector", "caracter", "sir", "daca", "daca_nu", "cat_timp",

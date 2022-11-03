@@ -1,5 +1,5 @@
 int a, b, c, max, random_variable
-read a, b, c
+read 5a, b, c
 
 random = 5
 
