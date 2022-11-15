@@ -108,6 +108,8 @@ class FiniteAutomata:
             command = int(input("command >> "))
 
 
-fa = FiniteAutomata(r"C:\Users\Ionut\PycharmProjects\Formal-Languages-and-Compiler-Design\Lab4\inputExample.txt")
-fa.menu()
+# fa = FiniteAutomata(r"C:\Users\Ionut\PycharmProjects\Formal-Languages-and-Compiler-Design\Lab4\inputExample.txt")
+# faNumbers = FiniteAutomata(r"C:\Users\Ionut\PycharmProjects\Formal-Languages-and-Compiler-Design\Lab4\constantFA.txt")
+# faNumbers = FiniteAutomata(r"C:\Users\Ionut\PycharmProjects\Formal-Languages-and-Compiler-Design\Lab4\identifierFA.txt")
+# fa.menu()
 

@@ -1,5 +1,6 @@
 import re
 from symtable import hashTable
+from Lab4.fa import FiniteAutomata
 
 """
 
@@ -35,6 +36,9 @@ class Scanner:
         self.counter = 1
         self.tokenFileName = tokenFileName
         self.tokenTable = []
+
+        self.constantFA = FiniteAutomata(r"C:\Users\Ionut\PycharmProjects\Formal-Languages-and-Compiler-Design\Lab4\constantFA.txt")
+        self.identifierFA = FiniteAutomata(r"C:\Users\Ionut\PycharmProjects\Formal-Languages-and-Compiler-Design\Lab4\identifierFA.txt")
 
         self.generateTokenTable()
 
@@ -93,10 +97,12 @@ class Scanner:
         return False
 
     def isIdentifier(self, elem):
-        return bool(re.search("^[a-zA-Z_][a-zA-Z_0-9]*$", elem))
+        return self.identifierFA.checkToken(elem)
+        # return bool(re.search("^[a-zA-Z_][a-zA-Z_0-9]*$", elem))
 
     def isConstant(self, elem):
-        return bool(re.search("^[0-9]+$", elem))
+        return self.constantFA.checkToken(elem)
+        # return bool(re.search("^[0-9]+$", elem))
 
     def generateTokenTable(self,):
         f = open(self.tokenFileName, 'r')
