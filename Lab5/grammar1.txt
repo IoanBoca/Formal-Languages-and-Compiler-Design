@@ -3,5 +3,5 @@ a b d g h
 S
 S -> ACB | Cbb | Ba
 A -> da | BC
-B -> g | e
-C -> h | e
+B -> g | #
+C -> h | #
